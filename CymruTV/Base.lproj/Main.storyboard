@@ -245,8 +245,9 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="wEL-T5-e8a" secondAttribute="trailing" constant="20" id="DER-Kd-T6p"/>
-                                    <constraint firstItem="wEL-T5-e8a" firstAttribute="top" secondItem="WEO-Zb-FQ5" secondAttribute="bottom" constant="-3" id="GlW-rH-LPZ"/>
+                                    <constraint firstItem="wEL-T5-e8a" firstAttribute="top" secondItem="WEO-Zb-FQ5" secondAttribute="bottom" constant="20" id="GlW-rH-LPZ"/>
                                     <constraint firstItem="wEL-T5-e8a" firstAttribute="leading" secondItem="ohd-in-r8E" secondAttribute="leading" constant="20" id="Lne-8x-uLM"/>
+                                    <constraint firstItem="wEL-T5-e8a" firstAttribute="centerX" secondItem="ohd-in-r8E" secondAttribute="centerX" id="UQv-pq-1IT"/>
                                     <constraint firstAttribute="trailing" secondItem="WEO-Zb-FQ5" secondAttribute="trailing" constant="895" id="kzz-Wq-UZL"/>
                                 </constraints>
                             </scrollView>
