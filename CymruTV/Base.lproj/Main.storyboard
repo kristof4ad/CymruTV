@@ -113,7 +113,7 @@
                             <outlet property="delegate" destination="CyD-9s-iPF" id="lLo-xq-VUS"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="oSJ-tK-UXp"/>
+                    <tabBarItem key="tabBarItem" title="Places" id="oSJ-tK-UXp"/>
                     <navigationItem key="navigationItem" title="Places" id="8si-mC-RwY"/>
                     <keyCommands/>
                 </tableViewController>
@@ -280,7 +280,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Upload" width="32" height="32"/>
-        <image name="Volume" width="32" height="32"/>
+        <image name="Upload" width="64" height="64"/>
+        <image name="Volume" width="64" height="64"/>
     </resources>
 </document>
