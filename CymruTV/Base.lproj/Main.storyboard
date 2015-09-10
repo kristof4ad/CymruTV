@@ -13,7 +13,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Feu-08-N51">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Feu-08-N51">
                                 <rect key="frame" x="0.0" y="194" width="1890" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Feu-08-N51" id="qjp-3D-rEJ">
@@ -104,7 +104,7 @@
                                     <outlet property="descriptionLabel" destination="z4t-AI-iYN" id="gsK-BY-aPg"/>
                                     <outlet property="photoView" destination="yzg-b6-e3d" id="JgO-9d-GcK"/>
                                     <outlet property="titleLabel" destination="Wmc-pZ-hqA" id="eWl-Qr-Df5"/>
-                                    <segue destination="L0j-Zp-2uu" kind="show" id="EOz-TS-J8k"/>
+                                    <segue destination="L0j-Zp-2uu" kind="show" identifier="PlaceDetailSegue" id="EOz-TS-J8k"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
