@@ -17,6 +17,7 @@
 		A50F40331BA21256001B77C0 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50F402E1BA21256001B77C0 /* PlacesViewController.swift */; };
 		A50F40341BA21256001B77C0 /* PlacesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50F402F1BA21256001B77C0 /* PlacesDetailViewController.swift */; };
 		A50F40351BA21256001B77C0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50F40301BA21256001B77C0 /* Models.swift */; };
+		A50F40371BA2230D001B77C0 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50F40361BA2230D001B77C0 /* CustomViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A50F402E1BA21256001B77C0 /* PlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 		A50F402F1BA21256001B77C0 /* PlacesDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesDetailViewController.swift; sourceTree = "<group>"; };
 		A50F40301BA21256001B77C0 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		A50F40361BA2230D001B77C0 /* CustomViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				A50F402D1BA21256001B77C0 /* WordsDetailViewController.swift */,
 				A50F402C1BA21256001B77C0 /* WordsViewController.swift */,
 				A50F402E1BA21256001B77C0 /* PlacesViewController.swift */,
+				A50F40361BA2230D001B77C0 /* CustomViews.swift */,
 				A50F402F1BA21256001B77C0 /* PlacesDetailViewController.swift */,
 				A50F40301BA21256001B77C0 /* Models.swift */,
 				A50F401D1BA211E8001B77C0 /* FirstViewController.swift */,
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A50F40371BA2230D001B77C0 /* CustomViews.swift in Sources */,
 				A50F40331BA21256001B77C0 /* PlacesViewController.swift in Sources */,
 				A50F40201BA211E8001B77C0 /* SecondViewController.swift in Sources */,
 				A50F40321BA21256001B77C0 /* WordsDetailViewController.swift in Sources */,

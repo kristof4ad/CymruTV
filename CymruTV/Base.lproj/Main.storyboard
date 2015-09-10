@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Words-->
@@ -19,6 +20,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="1904" height="66"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="cNZ-pg-LFa" kind="show" id="tVq-HS-nKe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -54,13 +58,13 @@
         <!--Places-->
         <scene sceneID="qlY-19-Crh">
             <objects>
-                <tableViewController storyboardIdentifier="PlacesViewController" id="CyD-9s-iPF" customClass="PlacesViewController" customModule="Cymru" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PlacesViewController" id="CyD-9s-iPF" customClass="PlacesViewController" customModule="CymruTV" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="cxa-pz-DUU">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PlaceCell" rowHeight="70" id="uWS-Wo-9K2" customClass="PlacesTableViewCell" customModule="Cymru" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PlaceCell" rowHeight="70" id="uWS-Wo-9K2" customClass="PlacesTableViewCell" customModule="CymruTV" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="182" width="1890" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uWS-Wo-9K2" id="dsf-8S-Sdf">
@@ -79,7 +83,7 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yzg-b6-e3d" customClass="RoundedImageView" customModule="Cymru" customModuleProvider="target">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yzg-b6-e3d" customClass="RoundedImageView" customModule="CymruTV" customModuleProvider="target">
                                             <rect key="frame" x="14" y="9" width="50" height="50"/>
                                             <color key="backgroundColor" red="0.015686274510000001" green="0.87058823529999996" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </imageView>
@@ -100,6 +104,7 @@
                                     <outlet property="descriptionLabel" destination="z4t-AI-iYN" id="gsK-BY-aPg"/>
                                     <outlet property="photoView" destination="yzg-b6-e3d" id="JgO-9d-GcK"/>
                                     <outlet property="titleLabel" destination="Wmc-pZ-hqA" id="eWl-Qr-Df5"/>
+                                    <segue destination="L0j-Zp-2uu" kind="show" id="EOz-TS-J8k"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -114,7 +119,168 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5d8-lJ-EYm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2314" y="-104"/>
+            <point key="canvasLocation" x="2302" y="-352"/>
+        </scene>
+        <!--Definition-->
+        <scene sceneID="DqX-Fh-bWr">
+            <objects>
+                <viewController title="Definition" id="cNZ-pg-LFa" customClass="WordsDetailViewController" customModule="CymruTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h7f-ZR-mQF"/>
+                        <viewControllerLayoutGuide type="bottom" id="o2W-DA-DF9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rck-uk-tPR">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f4s-2n-wKJ">
+                                <rect key="frame" x="40" y="180" width="1840" height="241"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hxn-P3-H46" customClass="RoundedButton" customModule="CymruTV" customModuleProvider="target">
+                                        <rect key="frame" x="930" y="197" width="251" height="44"/>
+                                        <color key="backgroundColor" red="0.85098046059999999" green="0.062745101750000004" blue="0.12549020350000001" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="Volume"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNa-OY-VM5">
+                                        <rect key="frame" x="20" y="136" width="1800" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dv-98-67s" customClass="RoundedButton" customModule="CymruTV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="197" width="911" height="44"/>
+                                        <color key="backgroundColor" red="0.85098046059999999" green="0.062745101750000004" blue="0.12549020350000001" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="Upload"/>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iRg-LS-U3s" customClass="RoundedImageView" customModule="CymruTV" customModuleProvider="target">
+                                        <rect key="frame" x="880" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Q7g-5F-aFN"/>
+                                            <constraint firstAttribute="height" constant="80" id="ZmA-6P-lBk"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flH-Ob-Rsv">
+                                        <rect key="frame" x="0.0" y="100" width="1840" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="flH-Ob-Rsv" firstAttribute="top" secondItem="iRg-LS-U3s" secondAttribute="bottom" constant="20" id="08i-RT-Gkp"/>
+                                    <constraint firstItem="1dv-98-67s" firstAttribute="width" secondItem="Hxn-P3-H46" secondAttribute="width" id="0og-nu-chU"/>
+                                    <constraint firstItem="flH-Ob-Rsv" firstAttribute="leading" secondItem="f4s-2n-wKJ" secondAttribute="leading" id="9hi-n5-kkg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hxn-P3-H46" secondAttribute="trailing" id="AWp-8z-6WC"/>
+                                    <constraint firstItem="sNa-OY-VM5" firstAttribute="leading" secondItem="f4s-2n-wKJ" secondAttribute="leading" constant="20" id="DFZ-fH-gRR"/>
+                                    <constraint firstAttribute="trailing" secondItem="sNa-OY-VM5" secondAttribute="trailing" constant="20" id="GeP-Ex-EDZ"/>
+                                    <constraint firstItem="sNa-OY-VM5" firstAttribute="top" secondItem="flH-Ob-Rsv" secondAttribute="bottom" constant="15" id="Qbb-2j-vd4"/>
+                                    <constraint firstItem="Hxn-P3-H46" firstAttribute="leading" secondItem="1dv-98-67s" secondAttribute="trailing" constant="19" id="Rbf-1P-pTN"/>
+                                    <constraint firstAttribute="bottom" secondItem="1dv-98-67s" secondAttribute="bottom" id="ZCP-7f-dHb"/>
+                                    <constraint firstAttribute="trailing" secondItem="flH-Ob-Rsv" secondAttribute="trailing" id="aAn-zM-l4D"/>
+                                    <constraint firstItem="1dv-98-67s" firstAttribute="leading" secondItem="f4s-2n-wKJ" secondAttribute="leading" id="eZP-E9-zlT"/>
+                                    <constraint firstItem="1dv-98-67s" firstAttribute="top" secondItem="Hxn-P3-H46" secondAttribute="top" id="fTv-tR-CN9"/>
+                                    <constraint firstItem="1dv-98-67s" firstAttribute="bottom" secondItem="Hxn-P3-H46" secondAttribute="bottom" id="jgc-yK-3Pu"/>
+                                    <constraint firstItem="1dv-98-67s" firstAttribute="top" secondItem="sNa-OY-VM5" secondAttribute="bottom" constant="41" id="m9V-tl-Uq1"/>
+                                    <constraint firstItem="iRg-LS-U3s" firstAttribute="top" secondItem="f4s-2n-wKJ" secondAttribute="top" id="ok0-pG-JgS"/>
+                                    <constraint firstItem="iRg-LS-U3s" firstAttribute="centerX" secondItem="f4s-2n-wKJ" secondAttribute="centerX" id="tTJ-db-NwO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f4s-2n-wKJ" firstAttribute="centerY" secondItem="rck-uk-tPR" secondAttribute="centerY" id="Fmc-RH-7S3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f4s-2n-wKJ" secondAttribute="trailing" constant="20" id="pWy-gL-5gi"/>
+                            <constraint firstItem="f4s-2n-wKJ" firstAttribute="leading" secondItem="rck-uk-tPR" secondAttribute="leadingMargin" constant="20" id="uma-gB-cgo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="definitionLabel" destination="sNa-OY-VM5" id="VHa-gx-uVy"/>
+                        <outlet property="imageView" destination="iRg-LS-U3s" id="phc-Yb-ha4"/>
+                        <outlet property="middleConstraint" destination="Qbb-2j-vd4" id="jyE-wf-6iv"/>
+                        <outlet property="phraseLabel" destination="flH-Ob-Rsv" id="nof-6x-YtK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A5H-7Y-TgN" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4486" y="1296"/>
+        </scene>
+        <!--Places Detail View Controller-->
+        <scene sceneID="jAy-1x-PTH">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="L0j-Zp-2uu" customClass="PlacesDetailViewController" customModule="CymruTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XQL-ze-le7"/>
+                        <viewControllerLayoutGuide type="bottom" id="a0l-FY-1Be"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L2o-oP-TsO">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ohd-in-r8E">
+                                <rect key="frame" x="0.0" y="64" width="1920" height="487"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L73-9T-MAC" customClass="RoundedButton" customModule="CymruTV" customModuleProvider="target">
+                                        <rect key="frame" x="864" y="242" width="192" height="44"/>
+                                        <color key="backgroundColor" red="0.85098046059999999" green="0.062745101750000004" blue="0.12549020350000001" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="192" id="5eS-NL-L8o"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Directions"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Definition" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEL-T5-e8a">
+                                        <rect key="frame" x="20" y="170" width="560" height="20"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WEO-Zb-FQ5" customClass="RoundedImageView" customModule="CymruTV" customModuleProvider="target">
+                                        <rect key="frame" x="895" y="43" width="130" height="130"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="ApR-3R-Lsh"/>
+                                            <constraint firstAttribute="height" constant="130" id="JcT-8r-Uxd"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="wEL-T5-e8a" secondAttribute="trailing" constant="20" id="DER-Kd-T6p"/>
+                                    <constraint firstItem="wEL-T5-e8a" firstAttribute="top" secondItem="WEO-Zb-FQ5" secondAttribute="bottom" constant="-3" id="GlW-rH-LPZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="L73-9T-MAC" secondAttribute="bottom" constant="40" id="Grh-RI-mVL"/>
+                                    <constraint firstItem="L73-9T-MAC" firstAttribute="centerX" secondItem="ohd-in-r8E" secondAttribute="centerX" id="Ieu-GQ-Rja"/>
+                                    <constraint firstItem="wEL-T5-e8a" firstAttribute="leading" secondItem="ohd-in-r8E" secondAttribute="leading" constant="20" id="Lne-8x-uLM"/>
+                                    <constraint firstItem="L73-9T-MAC" firstAttribute="top" secondItem="wEL-T5-e8a" secondAttribute="bottom" constant="52" id="fFe-la-wP6"/>
+                                    <constraint firstAttribute="trailing" secondItem="WEO-Zb-FQ5" secondAttribute="trailing" constant="895" id="kzz-Wq-UZL"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ohd-in-r8E" secondAttribute="trailing" id="42p-CA-KVp"/>
+                            <constraint firstItem="a0l-FY-1Be" firstAttribute="top" secondItem="ohd-in-r8E" secondAttribute="bottom" id="o07-ER-iwz"/>
+                            <constraint firstItem="ohd-in-r8E" firstAttribute="leading" secondItem="L2o-oP-TsO" secondAttribute="leading" id="oBV-Zs-9un"/>
+                            <constraint firstItem="ohd-in-r8E" firstAttribute="top" secondItem="XQL-ze-le7" secondAttribute="bottom" id="uAc-yN-B2X"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="L73-9T-MAC" id="xug-Lu-ImS"/>
+                        <outlet property="fullTextLabel" destination="wEL-T5-e8a" id="l3r-gl-PA8"/>
+                        <outlet property="imageView" destination="WEO-Zb-FQ5" id="yqv-nu-X6B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EKd-jF-cch" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4630" y="-312"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Upload" width="32" height="32"/>
+        <image name="Volume" width="32" height="32"/>
+    </resources>
 </document>
