@@ -21,7 +21,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="cNZ-pg-LFa" kind="show" id="tVq-HS-nKe"/>
+                                    <segue destination="cNZ-pg-LFa" kind="show" identifier="DefineSegue" id="tVq-HS-nKe"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -104,7 +104,7 @@
                                     <outlet property="descriptionLabel" destination="z4t-AI-iYN" id="gsK-BY-aPg"/>
                                     <outlet property="photoView" destination="yzg-b6-e3d" id="JgO-9d-GcK"/>
                                     <outlet property="titleLabel" destination="Wmc-pZ-hqA" id="eWl-Qr-Df5"/>
-                                    <segue destination="L0j-Zp-2uu" kind="show" id="EOz-TS-J8k"/>
+                                    <segue destination="L0j-Zp-2uu" kind="show" identifier="PlaceDetailSegue" id="EOz-TS-J8k"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -226,15 +226,6 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ohd-in-r8E">
                                 <rect key="frame" x="0.0" y="64" width="1920" height="487"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L73-9T-MAC" customClass="RoundedButton" customModule="CymruTV" customModuleProvider="target">
-                                        <rect key="frame" x="864" y="242" width="192" height="44"/>
-                                        <color key="backgroundColor" red="0.85098046059999999" green="0.062745101750000004" blue="0.12549020350000001" alpha="1" colorSpace="deviceRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="192" id="5eS-NL-L8o"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Directions"/>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Definition" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEL-T5-e8a">
                                         <rect key="frame" x="20" y="170" width="560" height="20"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -252,10 +243,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="wEL-T5-e8a" secondAttribute="trailing" constant="20" id="DER-Kd-T6p"/>
                                     <constraint firstItem="wEL-T5-e8a" firstAttribute="top" secondItem="WEO-Zb-FQ5" secondAttribute="bottom" constant="-3" id="GlW-rH-LPZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="L73-9T-MAC" secondAttribute="bottom" constant="40" id="Grh-RI-mVL"/>
-                                    <constraint firstItem="L73-9T-MAC" firstAttribute="centerX" secondItem="ohd-in-r8E" secondAttribute="centerX" id="Ieu-GQ-Rja"/>
                                     <constraint firstItem="wEL-T5-e8a" firstAttribute="leading" secondItem="ohd-in-r8E" secondAttribute="leading" constant="20" id="Lne-8x-uLM"/>
-                                    <constraint firstItem="L73-9T-MAC" firstAttribute="top" secondItem="wEL-T5-e8a" secondAttribute="bottom" constant="52" id="fFe-la-wP6"/>
                                     <constraint firstAttribute="trailing" secondItem="WEO-Zb-FQ5" secondAttribute="trailing" constant="895" id="kzz-Wq-UZL"/>
                                 </constraints>
                             </scrollView>
@@ -269,9 +257,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="button" destination="L73-9T-MAC" id="xug-Lu-ImS"/>
-                        <outlet property="fullTextLabel" destination="wEL-T5-e8a" id="l3r-gl-PA8"/>
-                        <outlet property="imageView" destination="WEO-Zb-FQ5" id="yqv-nu-X6B"/>
+                        <outlet property="fullTextLabel" destination="wEL-T5-e8a" id="M5e-lb-5xn"/>
+                        <outlet property="imageView" destination="WEO-Zb-FQ5" id="C9X-Zc-Ytb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EKd-jF-cch" userLabel="First Responder" sceneMemberID="firstResponder"/>
